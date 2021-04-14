@@ -2,13 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { removeFeature } from '../actions/actions'
 
-const mapStateToProps = (state) => {
-  return {
-    car: state.car,
-    additionalFeatures: state.additionalFeatures,
-    additionalPrice: state.additionalPrice
-  }
-}
+
 
 const mapDispatchToState = dispatch => {
   return {
@@ -25,5 +19,13 @@ const AddedFeature = props => {
     </li>
   );
 };
+
+const mapStateToProps = (state) => {
+  return {
+    car: state.car,
+    additionalFeatures: state.additionalFeatures,
+    additionalPrice: state.additionalPrice
+  }
+}
 
 export default connect(mapStateToProps, mapDispatchToState)(AddedFeature);
