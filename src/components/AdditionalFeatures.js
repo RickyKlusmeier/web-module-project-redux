@@ -2,13 +2,7 @@ import React from 'react';
 import AdditionalFeature from './AdditionalFeature';
 import { connect } from 'react-redux'
 
-const mapStateToProps = (state) => {
-  return {
-    car: state.car,
-    additionalFeatures: state.additionalFeatures,
-    additionalPrice: state.additionalPrice
-  }
-}
+
 
 const AdditionalFeatures = props => {
   return (
@@ -26,5 +20,13 @@ const AdditionalFeatures = props => {
     </div>
   );
 };
+
+const mapStateToProps = (state) => {
+  return {
+    car: state.car,
+    additionalFeatures: state.additionalFeatures,
+    additionalPrice: state.additionalPrice
+  }
+}
 
 export default connect(mapStateToProps, {})(AdditionalFeatures);
